@@ -1,0 +1,146 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <div>
+        <h1>Documentation</h1>
+        <h2>GET ENDPOINTS</h2>
+        <ul>
+            <li><h4><span class="GET">GET</span> /car/id</h4></li>
+            <p>Returns json response containing car with id provided in URL <a href="http://127.0.0.1:5000/car/0">Example</a></p>
+            Example response 
+            <pre><code>
+                {
+                    "data": {
+                      "build_date": "25/09/2011", 
+                      "colour_id": 1, 
+                      "id": 0, 
+                      "make": "Honda", 
+                      "model": "Jazz"
+                    }, 
+                    "status": "ok"
+                }
+            </code></pre>
+
+            <li><h4><span class="GET">GET</span> /cars</h4></li>
+            <p>Returns json response containing all cars <a href="http://127.0.0.1:5000/cars">Example</a></p>
+            Example response 
+            <pre><code>
+                {
+                    "data": [
+                        {
+                            "build_date": "25/09/2011", 
+                            "colour_id": 1, 
+                            "id": 0, 
+                            "make": "Honda", 
+                            "model": "Jazz"
+                        }, 
+                        {
+                            "build_date": "25/09/2006", 
+                            "colour_id": 1, 
+                            "id": 1, 
+                            "make": "Ford", 
+                            "model": "GT"
+                        }, 
+                        {
+                            "build_date": "25/09/2012", 
+                            "colour_id": 1, 
+                            "id": 2, 
+                            "make": "Nissan", 
+                            "model": "Micra"
+                        }, 
+                        {
+                            "build_date": "25/09/2010", 
+                            "colour_id": 1, 
+                            "id": 3, 
+                            "make": "Citroen", 
+                            "model": "C1"
+                        }
+                    ], 
+                    "status": "ok"
+                    }
+            </code></pre>
+
+            <li><h4><span class="GET">GET</span> /colours</h4></li>
+            <p>Returns json response containing all colours <a href="http://127.0.0.1:5000/colours">Example</a></p>
+            Example response 
+            <pre><code>
+                {
+                    "data": [
+                      {
+                        "id": 0, 
+                        "name": "red"
+                      }, 
+                      {
+                        "id": 1, 
+                        "name": "blue"
+                      }, 
+                      {
+                        "id": 2, 
+                        "name": "white"
+                      }, 
+                      {
+                        "id": 3, 
+                        "name": "black"
+                      }
+                    ], 
+                    "status": "ok"
+                  }
+            </code></pre>
+
+            <li><h4><span class="GET">GET</span> /colour/id</h4></li>
+            <p>Returns json response containing colour with id provided in URL <a href="http://127.0.0.1:5000/colour/1">Example</a></p>
+        </ul>
+
+        <h2>POST Requests</h2>
+        <ul>
+            <li><h4><span class="POST">POST</span> /cars</h4></li>
+            <p>Sends a list of car objects to store in the API. Each car object must contain a "make", "model", "build_date", and valid "colour_id".</p>
+            Example body of POST request
+
+            <pre><code>
+            {
+                "cars": [
+                    {
+                        "make": "hondaaaaaaaaaaaaaaaaaa",
+                        "model": "jazz",
+                        "build_date": "22/06/2017",
+                        "colour_id": "2"
+                    },
+                    {
+                        "make": "hondaarrrrrr",
+                        "model": "jazz",
+                        "build_date": "22/06/2017",
+                        "colour_id": "3"
+                    }
+                ]
+            }
+        </code></pre>
+
+            <li><h4><span class="POST">POST</span> /colours</h4></li>
+            <p>Sends a list of colour objects to store in the API. Each colour object must contain a "name".</p>
+            Example body of POST request
+            <pre><code>
+            {
+                "colours": [
+                    {
+                        "name": "orange"
+                    },
+                    {
+                        "name": "violet"
+                    }
+                ]
+            }
+            </code></pre>
+
+        </ul>
+
+        <h2>DELETE Requests</h2>
+        <ul>
+            <li><h4><span class="DELETE">DELETE</span> /car/id</h4></li>
+            <p>Deletes car in API with id provided in url.</p>
+
+            <li><h4><span class="DELETE">DELETE</span> /colour/id</h4></li>
+            <p>Deletes ccolour in API with id provided in url.</p>
+        </ul>
+    </div>
+</section>
