@@ -17,7 +17,7 @@ STEP4: ```pip install -r requirements.txt ``` (install requirements)
 ## Run Tests
 ```python test.py``` (make sure virtual environment is active)
 
-## REQUESTS
+## HTTP REQUESTS
 ### GET
 
 GET /
