@@ -19,6 +19,9 @@ STEP4: ```pip install -r requirements.txt ``` (install requirements)
 
 ## REQUESTS
 ### GET
+
+GET /
+
 GET /cars
 
 GET /car/id
