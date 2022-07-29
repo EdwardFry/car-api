@@ -20,7 +20,7 @@ STEP4: ```pip install -r requirements.txt ``` (install requirements)
 ## HTTP REQUESTS
 ### GET
 
-GET /
+Documentation @ GET /
 
 GET /cars
 
