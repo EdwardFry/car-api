@@ -11,10 +11,12 @@ STEP4: ```pip install -r requirements.txt ``` (install requirements)
 
 ## Run Server
 
+```venv\Scripts\activate``` (activate virtual env)
 ```python app.py``` (make sure virtual environment is active)
 
 
 ## Run Tests
+```venv\Scripts\activate``` (activate virtual env)
 ```python test.py``` (make sure virtual environment is active)
 
 # HTTP REQUESTS
